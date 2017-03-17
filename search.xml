@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[shell命令]]></title>
+      <url>%2FAndroid-note%2F2016%2F07%2F29%2Fshell-commond%2F</url>
+      <content type="text"><![CDATA[本文主要记录一些在开发过程中碰到过的，且比较常用的 Shell 命令 替换操作 ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str3}: 将 str1 中所有的 str2 替换为 str3 1234str1="ios android other"str2="other"str3="wp"echo $&#123;str1/$&#123;str2&#125;/$&#123;str3&#125;&#125;打印的结果为：ios android wp 字符截取 # 是去除左边的字符 % 是去除右边的字符 单一字符为最小匹配，双字符为最大匹配 1file=d:/work/study/android/demo.apk ${file#*/}:去除第一条/及其左边的内容：work/study/android/demo.apk ${file##*/}:去除最后一条/及其左边的内容：demo.apk ${file#*.}:去除第一个.及其左边的内容：apk ${file%/*}:去除最后一个/及其右边的内容：d:/work/study/android ${file%%/*}:去除第一个/及其右边的内容：d: 复制操作 cp --parents FILE DIR: 将FILE复制到DIR，并且FILE的目录结构也复制过去]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Android 学习笔记之 Android 编译过程]]></title>
+      <url>%2FAndroid-note%2F2016%2F04%2F11%2FAndroid%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8BAndroid%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%2F</url>
+      <content type="text"><![CDATA[因为工作的原因，最近开始接触 Android 源码的编译；之前只是做应用层的开发，对于 framework 层也仅限于了解，所以近期结合公司的文档以及查阅一些博客，简要的了解了一下，之后必将详细进行分析（留坑） Android 编译过程 source build/envsetup.sh: 此命令主要是将 envsetup.sh 中所用到的命令加载到环境变量中 lunch: 执行此命令会打印出一个列表，列出所有可编译的选项 eng：工程机模式；可以在开发中配置一些 Debug 工具 user：正式版；也就是开放给用户使用的版本 userdebug：调试测试机；和 user 模式类似，但是相比 user 版本开放了 root 访问权限，并且具有 debug 功能 make: 执行编译；make 指令是去执行当前目录下的 Makefile 文件 ps:鉴于本人也只是个初学者，以上内容由于了解不够深入，可能会有偏差，所以还请多找找其他资料。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[my first blog]]></title>
+      <url>%2F%E7%94%9F%E6%B4%BB%2F2016%2F04%2F11%2Fmy-first-blog%2F</url>
+      <content type="text"><![CDATA[写这篇博客其实是作为一个记录，因为这是我搭建博客后第一篇自己书写的博客 原因创建博客的时机很凑巧，正好是我在第二份工作的面试准备阶段；一个直接原因就是我在这期间接触到了我 Android 道路上的贵人：stormzhang；受张哥的影响，以及张哥的那篇我为什么坚持写博客，于是在刚入职的这段时间开始了博客的搭建；我自己也以此作为自己的一个新规划：在技术的道路上继续前进,努力成为一个 AndroidDeveloper]]></content>
+    </entry>
+
+    
+  
+  
+</search>
