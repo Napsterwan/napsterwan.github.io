@@ -3,13 +3,6 @@
   
     
     <entry>
-      <title><![CDATA[修改主题]]></title>
-      <url>%2Funcategorized%2F2017%2F04%2F19%2Fchange-theme-test%2F</url>
-      <content type="text"><![CDATA[哈啊啦，离开多久了，神盾局叽叽叽叽军军解决解决就解决解决就就就就 解决解决就就就解决就1111就解决就解决解决就就就解决就解决就解决就就]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[shell命令]]></title>
       <url>%2FAndroid-note%2F2016%2F07%2F29%2Fshell-commond%2F</url>
       <content type="text"><![CDATA[本文主要记录一些在开发过程中碰到过的，且比较常用的 Shell 命令 替换操作 ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str3}: 将 str1 中所有的 str2 替换为 str3 1234str1="ios android other"str2="other"str3="wp"echo $&#123;str1/$&#123;str2&#125;/$&#123;str3&#125;&#125;打印的结果为：ios android wp 字符截取 # 是去除左边的字符 % 是去除右边的字符 单一字符为最小匹配，双字符为最大匹配 1file=d:/work/study/android/demo.apk ${file#*/}:去除第一条/及其左边的内容：work/study/android/demo.apk ${file##*/}:去除最后一条/及其左边的内容：demo.apk ${file#*.}:去除第一个.及其左边的内容：apk ${file%/*}:去除最后一个/及其右边的内容：d:/work/study/android ${file%%/*}:去除第一个/及其右边的内容：d: 复制操作 cp --parents FILE DIR: 将FILE复制到DIR，并且FILE的目录结构也复制过去]]></content>
