@@ -402,37 +402,18 @@
 
       
         
-          
-            <blockquote>
-<p>首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。</p>
+          <blockquote>
+<p>数据线为什么是易耗品呢？</p>
+<p>因为我们总是在拔插。</p>
 </blockquote>
-<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。</p>
-<h3 id="通过-WLAN-连接设备"><a href="#通过-WLAN-连接设备" class="headerlink" title="通过 WLAN 连接设备"></a><a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#wireless" target="_blank" rel="external">通过 WLAN 连接设备</a></h3><p>步骤：</p>
-<ol>
-<li>确保手机和电脑处于同一局域网下；</li>
-<li>将手机通过 USB 连接到电脑，并通过 <code>adb usb</code> 命令确认当前是处于 USB 连接模式<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
-<li>使用 <code>adb tcpip</code> 模式重启 adb;<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_tcpip.png" alt="adb tcpip"></li>
-<li>查看手机当前的 IP 地址：<ul>
-<li>设置-关于手机-状态信息- IP 地址</li>
-<li>设置- WLAN -长按当前连接的 WiFi 查看 IP</li>
-</ul>
-</li>
-<li>通过 <code>adb connect</code> 命令进行连接，此时通过 <code>adb devices</code> 查看连接设备就有两个了；<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_connect.png" alt="adb connect"></li>
-<li>拔出 USB 后，通过 <code>adb devices</code> 命令查看，手机仍然是连着的。<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
-</ol>
-<p>如果连接中断了，进行如下操作即可：</p>
-<ol>
-<li>先检查手机和电脑是否处于同一局域网内；</li>
-<li>然后再次执行 <code>adb connect</code> 操作重新连接；</li>
-<li>如果仍无法连接，可执行 <code>adb kill-server</code> 重置 adb 主机；然后重新开始操作。</li>
-</ol>
-<p>另外还可以通过安装插件的方式实现：</p>
-<ul>
-<li><a href="https://github.com/pedrovgs/AndroidWiFiADB" target="_blank" rel="external">AndroidWiFiADB</a></li>
-<li><a href="https://plugins.jetbrains.com/plugin/7856-adb-wifi" target="_blank" rel="external">ADB WiFi</a></li>
-</ul>
-
-          
+<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Android-note/2017/05/22/adb-wifi-debug/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

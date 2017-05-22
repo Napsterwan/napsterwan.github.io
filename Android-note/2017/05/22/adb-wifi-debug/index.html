@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="adb," />
+  <meta name="keywords" content="Android,adb," />
 
 
 
@@ -87,38 +87,29 @@
 
 
 
-<meta name="description" content="首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。
+<meta name="description" content="数据线为什么是易耗品呢？
+因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。
-通过 WLAN 连接设备步骤：
-
-确保手机和电脑处于同一局域网下；
-将手机通过 USB 连接到电脑，并通过 adb usb 命令">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android 技巧之 adb 无线调试">
 <meta property="og:url" content="http://napsterwan.com/Android-note/2017/05/22/adb-wifi-debug/index.html">
 <meta property="og:site_name" content="Napsterwan's blog">
-<meta property="og:description" content="首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。
+<meta property="og:description" content="数据线为什么是易耗品呢？
+因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。
-通过 WLAN 连接设备步骤：
-
-确保手机和电脑处于同一局域网下；
-将手机通过 USB 连接到电脑，并通过 adb usb 命令">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_tcpip.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_connect.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
-<meta property="og:updated_time" content="2017-05-22T13:31:02.000Z">
+<meta property="og:updated_time" content="2017-05-22T13:36:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 技巧之 adb 无线调试">
-<meta name="twitter:description" content="首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。
+<meta name="twitter:description" content="数据线为什么是易耗品呢？
+因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。
-通过 WLAN 连接设备步骤：
-
-确保手机和电脑处于同一局域网下；
-将手机通过 USB 连接到电脑，并通过 adb usb 命令">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
 <meta name="twitter:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
 
 
@@ -421,9 +412,10 @@
 
       
         <blockquote>
-<p>首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。</p>
+<p>数据线为什么是易耗品呢？</p>
+<p>因为我们总是在拔插。</p>
 </blockquote>
-<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。</p>
+<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。<br><a id="more"></a></p>
 <h3 id="通过-WLAN-连接设备"><a href="#通过-WLAN-连接设备" class="headerlink" title="通过 WLAN 连接设备"></a><a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#wireless" target="_blank" rel="external">通过 WLAN 连接设备</a></h3><p>步骤：</p>
 <ol>
 <li>确保手机和电脑处于同一局域网下；</li>
@@ -476,6 +468,8 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
             <a href="/tags/adb/" rel="tag"># adb</a>
           
