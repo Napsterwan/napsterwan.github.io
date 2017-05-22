@@ -90,7 +90,7 @@
 <meta name="description" content="数据线为什么是易耗品呢？
 因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我之前就饱受借数据线的困扰。这里，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android 技巧之 adb 无线调试">
 <meta property="og:url" content="http://napsterwan.com/Android-note/2017/05/22/adb-wifi-debug/index.html">
@@ -98,19 +98,19 @@
 <meta property="og:description" content="数据线为什么是易耗品呢？
 因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
-<meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我之前就饱受借数据线的困扰。这里，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
+<meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_usb.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_tcpip.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_connect.png">
 <meta property="og:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
-<meta property="og:updated_time" content="2017-05-22T13:36:16.000Z">
+<meta property="og:updated_time" content="2017-05-22T13:42:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 技巧之 adb 无线调试">
 <meta name="twitter:description" content="数据线为什么是易耗品呢？
 因为我们总是在拔插。
 
-在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
-<meta name="twitter:image" content="http://oamkej5hl.bkt.clouddn.com/adb_devices.png">
+在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我之前就饱受借数据线的困扰。这里，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。">
+<meta name="twitter:image" content="http://oamkej5hl.bkt.clouddn.com/adb_usb.png">
 
 
 
@@ -415,11 +415,11 @@
 <p>数据线为什么是易耗品呢？</p>
 <p>因为我们总是在拔插。</p>
 </blockquote>
-<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。<br><a id="more"></a></p>
+<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我之前就饱受借数据线的困扰。这里，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。<br><a id="more"></a></p>
 <h3 id="通过-WLAN-连接设备"><a href="#通过-WLAN-连接设备" class="headerlink" title="通过 WLAN 连接设备"></a><a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#wireless" target="_blank" rel="external">通过 WLAN 连接设备</a></h3><p>步骤：</p>
 <ol>
 <li>确保手机和电脑处于同一局域网下；</li>
-<li>将手机通过 USB 连接到电脑，并通过 <code>adb usb</code> 命令确认当前是处于 USB 连接模式<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
+<li>将手机通过 USB 连接到电脑，并通过 <code>adb usb</code> 命令确认当前是处于 USB 连接模式<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_usb.png" alt="adb usb"></li>
 <li>使用 <code>adb tcpip</code> 模式重启 adb;<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_tcpip.png" alt="adb tcpip"></li>
 <li>查看手机当前的 IP 地址：<ul>
 <li>设置-关于手机-状态信息- IP 地址</li>
@@ -427,7 +427,7 @@
 </ul>
 </li>
 <li>通过 <code>adb connect</code> 命令进行连接，此时通过 <code>adb devices</code> 查看连接设备就有两个了；<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_connect.png" alt="adb connect"></li>
-<li>拔出 USB 后，通过 <code>adb devices</code> 命令查看，手机仍然是连着的。<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
+<li>拔出 USB 后，通过 <code>adb devices</code> 命令查看，手机仍然是连着的,接下来我们就可以 happy 的开始调试了。<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
 </ol>
 <p>如果连接中断了，进行如下操作即可：</p>
 <ol>
