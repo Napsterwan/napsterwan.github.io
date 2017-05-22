@@ -293,6 +293,187 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://napsterwan.com/Android-note/2017/05/22/adb-wifi-debug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Napsterwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Napsterwan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Android-note/2017/05/22/adb-wifi-debug/" itemprop="url">
+                  Android 技巧之 adb 无线调试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-22T20:32:08+08:00">
+                2017-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android-note/" itemprop="url" rel="index">
+                    <span itemprop="name">Android-note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Android-note/2017/05/22/adb-wifi-debug/" class="leancloud_visitors" data-flag-title="Android 技巧之 adb 无线调试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。</p>
+</blockquote>
+<p>在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。</p>
+<h3 id="通过-WLAN-连接设备"><a href="#通过-WLAN-连接设备" class="headerlink" title="通过 WLAN 连接设备"></a><a href="https://developer.android.com/studio/command-line/adb.html?hl=zh-cn#wireless" target="_blank" rel="external">通过 WLAN 连接设备</a></h3><p>步骤：</p>
+<ol>
+<li>确保手机和电脑处于同一局域网下；</li>
+<li>将手机通过 USB 连接到电脑，并通过 <code>adb usb</code> 命令确认当前是处于 USB 连接模式<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
+<li>使用 <code>adb tcpip</code> 模式重启 adb;<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_tcpip.png" alt="adb tcpip"></li>
+<li>查看手机当前的 IP 地址：<ul>
+<li>设置-关于手机-状态信息- IP 地址</li>
+<li>设置- WLAN -长按当前连接的 WiFi 查看 IP</li>
+</ul>
+</li>
+<li>通过 <code>adb connect</code> 命令进行连接，此时通过 <code>adb devices</code> 查看连接设备就有两个了；<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_connect.png" alt="adb connect"></li>
+<li>拔出 USB 后，通过 <code>adb devices</code> 命令查看，手机仍然是连着的。<br> <img src="http://oamkej5hl.bkt.clouddn.com/adb_devices.png" alt="adb devices"></li>
+</ol>
+<p>如果连接中断了，进行如下操作即可：</p>
+<ol>
+<li>先检查手机和电脑是否处于同一局域网内；</li>
+<li>然后再次执行 <code>adb connect</code> 操作重新连接；</li>
+<li>如果仍无法连接，可执行 <code>adb kill-server</code> 重置 adb 主机；然后重新开始操作。</li>
+</ol>
+<p>另外还可以通过安装插件的方式实现：</p>
+<ul>
+<li><a href="https://github.com/pedrovgs/AndroidWiFiADB" target="_blank" rel="external">AndroidWiFiADB</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/7856-adb-wifi" target="_blank" rel="external">ADB WiFi</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://napsterwan.com/Android-note/2016/07/29/shell-commond/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -831,7 +1012,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -842,7 +1023,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -853,7 +1034,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

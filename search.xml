@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Android 技巧之 adb 无线调试]]></title>
+      <url>%2FAndroid-note%2F2017%2F05%2F22%2Fadb-wifi-debug%2F</url>
+      <content type="text"><![CDATA[首先，我们来开个脑洞：数据线为什么是易耗品呢？因为我们总是在拔插。 在我们的日常开发中，经常需要在多个手机上进行调试，这时候，好用且耐用的数据线就成了稀缺资源，我就饱受借数据线的困扰。这里呢，给大家介绍一个小技巧，让我们尽量少的拔插数据线。「保护数据线，从我做起」。 通过 WLAN 连接设备步骤： 确保手机和电脑处于同一局域网下； 将手机通过 USB 连接到电脑，并通过 adb usb 命令确认当前是处于 USB 连接模式 使用 adb tcpip 模式重启 adb; 查看手机当前的 IP 地址： 设置-关于手机-状态信息- IP 地址 设置- WLAN -长按当前连接的 WiFi 查看 IP 通过 adb connect 命令进行连接，此时通过 adb devices 查看连接设备就有两个了； 拔出 USB 后，通过 adb devices 命令查看，手机仍然是连着的。 如果连接中断了，进行如下操作即可： 先检查手机和电脑是否处于同一局域网内； 然后再次执行 adb connect 操作重新连接； 如果仍无法连接，可执行 adb kill-server 重置 adb 主机；然后重新开始操作。 另外还可以通过安装插件的方式实现： AndroidWiFiADB ADB WiFi]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[shell命令]]></title>
       <url>%2FAndroid-note%2F2016%2F07%2F29%2Fshell-commond%2F</url>
       <content type="text"><![CDATA[本文主要记录一些在开发过程中碰到过的，且比较常用的 Shell 命令 替换操作 ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str3}: 将 str1 中所有的 str2 替换为 str3 1234str1="ios android other"str2="other"str3="wp"echo $&#123;str1/$&#123;str2&#125;/$&#123;str3&#125;&#125;打印的结果为：ios android wp 字符截取 # 是去除左边的字符 % 是去除右边的字符 单一字符为最小匹配，双字符为最大匹配 1file=d:/work/study/android/demo.apk ${file#*/}:去除第一条/及其左边的内容：work/study/android/demo.apk ${file##*/}:去除最后一条/及其左边的内容：demo.apk ${file#*.}:去除第一个.及其左边的内容：apk ${file%/*}:去除最后一个/及其右边的内容：d:/work/study/android ${file%%/*}:去除第一个/及其右边的内容：d: 复制操作 cp --parents FILE DIR: 将FILE复制到DIR，并且FILE的目录结构也复制过去]]></content>
