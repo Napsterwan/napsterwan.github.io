@@ -376,6 +376,18 @@ ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str
 
           
             
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Android-note/2016/07/29/shell-commond/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="Android-note/2016/07/29/shell-commond/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
           
 
           
@@ -514,18 +526,7 @@ ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str
           
   <div class="comments" id="comments">
     
-      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-        <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-        <script>
-        var cloudTieConfig = {
-          url: document.location.href, 
-          sourceId: "",
-          productKey: "f2b61881f2884b4a9ffaf70567db904d",
-          target: "cloud-tie-wrapper"
-        };
-        var yunManualLoad = true;
-        Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-        </script>
+      <div id="hypercomments_widget"></div>
     
   </div>
 
@@ -798,23 +799,33 @@ ${str1/str2/str3} : 将 str1 中的 第一个str2 替换为 str3${str1//str2/str
 
 	
 
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 93186, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 93186, xid: "Android-note/2016/07/29/shell-commond/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/93186/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
 
 
 
 
-  
 
 
-
-
-
-  
-
-
-
-
-
-  
 
 
 
